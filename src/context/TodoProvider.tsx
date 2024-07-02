@@ -10,7 +10,12 @@ const reducer = (currentState: TTodo[], action: TAction) => {
   switch (action.type) {
     case "addTodo":
       return [...currentState, action.payload];
-
+    case "taskComplete":
+      return currentState.map((item) =>
+        item.id === action.payload
+          ? { ...item, isCompleted: !item.isCompleted }
+          : item
+      );
     default:
       return currentState;
   }

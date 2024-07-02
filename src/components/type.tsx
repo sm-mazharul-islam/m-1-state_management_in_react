@@ -21,5 +21,5 @@ export type TTodo = {
 
 export type TAction = {
   type: string;
-  payload: TTodo;
+  payload: TTodo | string;
 };
