@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 export type TProps = {
   count: number;
@@ -7,4 +7,8 @@ export type TProps = {
 
 export type TCount = {
   count: number;
+};
+
+export type TTodoProviderProps = {
+  children: ReactNode;
 };
