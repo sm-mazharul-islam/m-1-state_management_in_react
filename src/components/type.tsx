@@ -20,6 +20,6 @@ export type TTodo = {
 };
 
 export type TAction = {
-  type: string;
+  type: "addTodo" | "taskComplete";
   payload: TTodo | string;
 };
